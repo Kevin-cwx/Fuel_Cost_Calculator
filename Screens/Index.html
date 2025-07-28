@@ -1,81 +1,75 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="/Styles/MyStyleSheet.css">
-
-
-  <title></title>
-</head>
-
-<body>
-
-  <div class="Main">
-    <div class="Left">
-
-      <h2>Calculate how much gas it costs you to drive.</h2>
-
-      <div class="input-row">
-
-      <div class="input-group">
-        <label for="Brand">Brand</label>
-        <input type="text" id="Brand" placeholder="Brand">
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="/Styles/MyStyleSheet.css" />
+      <title></title>
+   </head>
+   <body>
+      <div class="Main">
+         <div class="Left">
+            <h2>Calculate how much gas it costs you to drive.</h2>
+            <div class="input-row">
+               <div class="input-group">
+                  <label class="Input_Label" for="Brand">Brand</label>
+                  <input type="text" id="Brand" placeholder="Brand" />
+               </div>
+               <div class="input-group">
+                  <label class="Input_Label" for="Model">Model</label>
+                  <input type="text" id="Model" placeholder="Model" />
+               </div>
+               <div class="input-group">
+                  <label class="Input_Label" for="YearPicker">Car Year</label>
+                  <select id="YearPicker" class="year-picker"></select>
+               </div>
+               <div class="input-group">
+                  <label class="Input_Label" for="Start_Location"
+                     >Start Location</label
+                     >
+                  <input
+                     type="text"
+                     id="Start_Location"
+                     placeholder="Start Location" />
+               </div>
+               <div class="input-group">
+                  <label class="Input_Label" for="End_Location">End Location</label>
+                  <input type="text" id="End_Location" placeholder="End Location" />
+               </div>
+            </div>
+            <div class="row-pair">
+               <span id="AC_Parent">
+               <label class="Input_Label">Air Conditioning (AC)</label><br />
+               <label
+                  ><input type="radio" name="AC" value="on" checked /> on</label
+                  >
+               <label><input type="radio" name="AC" value="off" /> off</label>
+               </span>
+               <span id="Traffic_Parent">
+               <label class="Input_Label">Traffic</label><br />
+               <label
+                  ><input type="radio" name="traffic" value="none" checked />
+               None</label
+                  >
+               <label><input type="radio" name="traffic" value="low" /> Low</label>
+               <label
+                  ><input type="radio" name="traffic" value="medium" />
+               Medium</label
+                  >
+               <label
+                  ><input type="radio" name="traffic" value="high" /> High</label
+                  >
+               </span>
+            </div>
+            <button class="btn-calculate" onclick="Calculate_Gas_Money(false)">
+            Calculate
+            </button>
+            <button class="btn-calculate" onclick="Calculate_Gas_Money(true)">
+            Randomize
+            </button>
+         </div>
+         <div class="Right"></div>
       </div>
-      
-      <div class="input-group">
-        <label for="Model">Model</label>
-        <input type="text" id="Model" placeholder="Model">
-      </div>
-      
-      <div class="input-group">
-        <label for="YearPicker">Year</label>
-        <select id="YearPicker" class="year-picker"></select>
-      </div>
-      
-      <div class="input-group">
-        <label for="Start_Location">Start Location</label>
-        <input type="text" id="Start_Location" placeholder="Start Location">
-      </div>
-      
-      <div class="input-group">
-        <label for="End_Location">End Location</label>
-        <input type="text" id="End_Location" placeholder="End Location">
-      </div>
-      </div>
-
-
-      <div class="row-pair">
-
-        <span id="AC_Parent">
-          <p>Air Conditioning (AC)</p>
-          <label><input type="radio" name="AC" value="on" checked> on</label>
-          <label><input type="radio" name="AC" value="off"> off</label>
-        </span>
-
-        <span id="Traffic_Parent">
-          <p>Traffic</p>
-          <label><input type="radio" name="traffic" value="none" checked> None</label>
-          <label><input type="radio" name="traffic" value="low"> Low</label>
-          <label><input type="radio" name="traffic" value="medium"> Medium</label>
-          <label><input type="radio" name="traffic" value="high"> High</label>
-        </span>
-      </div>
-      <button class="btn-calculate" onclick="Calculate_Gas_Money()">Calculate</button>
-
-
-
-    </div>
-    <div class="Right"></div>
-  </div>
-
-
-
-
-  <script src="/Scripts/MainScript.js"></script>
-    <script src="/Scripts/Calculate_Gas_Money.js"></script>
-
-
-</body>
-
+      <script src="/Scripts/MainScript.js"></script>
+      <script src="/Scripts/Calculate_Gas_Money.js"></script>
+   </body>
 </html>

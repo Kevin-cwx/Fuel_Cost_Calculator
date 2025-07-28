@@ -1,135 +1,149 @@
 body {
-	background-color: rgb(103, 103, 126)
+  background-color: rgb(165, 165, 201);
 }
 
 .Main {
-	display: flex;
-	width: 100%;
-	min-height: 100vh;
-	box-sizing: border-box;
-	padding: 20px;
-	padding-bottom: 0px;
-	gap: 20px;
-	font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-bottom: 0px;
+  gap: 20px;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .Left,
 .Right {
-	flex: 1;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .Left input[type="text"] {
-	width: 15%;
-	max-width: 300px;
-	margin-bottom: 15px;
-	padding: 12px;
-	font-size: 16px;
-	border: 1px solid #ccc;
-	border-radius: 6px;
-	transition: border-color 0.3s;
+ 
+  max-width: 300px;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
 }
 
 .Left input[type="text"]:focus {
-	border-color: #4a90e2;
-	outline: none;
+  border-color: #4a90e2;
+  outline: none;
 }
-
-
 
 #AC_Parent,
 #Traffic_Parent {
-
-	min-width: 200px;
+  min-width: 200px;
 }
 
 #AC_Parent p,
 #Traffic_Parent p {
-	margin-bottom: 8px;
-	font-weight: bold;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
 #AC_Parent label,
 #Traffic_Parent label {
-	display: inline-block;
-	margin-right: 10px;
-	font-size: 14px;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
 }
 
 input[type="radio"] {
-	margin-right: 5px;
-	accent-color: #4a90e2;
+  margin-right: 5px;
+  accent-color: #4a90e2;
 }
 
 .row-pair {
-	display: flex;
-	justify-content: space-between;
-	gap: 10px;
-	margin-top: 20px;
-	flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 /* Button */
 
 .btn-calculate {
-	background-color: #4a90e2;
-	color: white;
-	font-weight: 600;
-	margin-top: 40px;
-	padding: 12px 30px;
-	font-size: 16px;
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
-	box-shadow: 0 4px 8px rgb(74 144 226 / 0.4);
+  background-color: #4a90e2;
+  color: white;
+  font-weight: 600;
+  margin-top: 40px;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgb(74 144 226 / 0.4);
 }
 
 .btn-calculate:hover {
-	background-color: #357ab7;
-	box-shadow: 0 6px 12px rgb(53 122 183 / 0.6);
+  background-color: #357ab7;
+  box-shadow: 0 6px 12px rgb(53 122 183 / 0.6);
 }
 
 .btn-calculate:focus {
-	outline: 2px solid #255a9e;
-	outline-offset: 2px;
+  outline: 2px solid #255a9e;
+  outline-offset: 2px;
 }
 
 /* Year Picker */
 
 .year-picker {
-	width: 15%;
-	max-width: 300px;
-	margin-bottom: 15px;
-	padding: 12px;
-	font-size: 16px;
-	border: 1px solid #ccc;
-	border-radius: 6px;
-	background-color: white;
-	appearance: none;
-	cursor: pointer;
-	transition: border-color 0.3s;
+  width: 15%;
+  max-width: 300px;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.3s;
 }
 
 /* Input Groups */
 .input-row {
-	display: flex;
+  /* display: flex;
 	flex-wrap: nowrap;
-	justify-content: space-between;
+	justify-content: space-between; */
 
-	
+  display: flex;
+  gap: 1rem; /* space between inputs */
+  flex-wrap: nowrap;
+  margin-bottom: 1rem;
 }
 
 .input-group {
-	display: flex;
-	flex-direction: column;
-	
-	
+  display: flex;
+  flex-direction: column;
+  min-width: 150px; /* decent base width */
+  flex: 1;
 }
 
 .input-group input,
 .input-group select {
-	width: 100%;
+ padding: 8px;
+  font-size: 1rem;
+  width: 100%; /* full width of the input-group */
+  box-sizing: border-box;
+}
+
+
+#YearPicker{
+	height: 43px;
+}
+
+.Input_Label{
+	padding: 5px;
+	font-size: 20px;
+	font-weight: 600;
 }
