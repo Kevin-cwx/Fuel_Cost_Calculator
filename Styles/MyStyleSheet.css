@@ -147,3 +147,26 @@ input[type="radio"] {
 	font-size: 20px;
 	font-weight: 600;
 }
+
+
+.Car_Image{
+	width: 180px;
+}
+
+
+/* Car Option */
+.Car_Options {
+	margin-top: 10px;
+}
+
+.Car_Option {
+	width: 100px;
+	height: auto;
+	margin-left: 30px;
+	cursor: pointer;
+	border: 2px solid transparent;
+}
+
+.Car_Option.selected {
+	border-color: blue;
+}

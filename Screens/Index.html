@@ -5,23 +5,20 @@
       <link rel="stylesheet" href="/Styles/MyStyleSheet.css" />
       <title></title>
    </head>
-   <body>
+   <body> 
       <div class="Main">
          <div class="Left">
             <h2>Calculate how much gas it costs you to drive.</h2>
             <div class="input-row">
                <div class="input-group">
-                  <label class="Input_Label" for="Brand">Brand</label>
-                  <input type="text" id="Brand" placeholder="Brand" />
+                  <label class="Input_Label" for="Brand">Select Car</label>
+                  <img src="" alt="Trulli" id="Car" class="Car_Image">
                </div>
-               <div class="input-group">
-                  <label class="Input_Label" for="Model">Model</label>
-                  <input type="text" id="Model" placeholder="Model" />
-               </div>
-               <div class="input-group">
-                  <label class="Input_Label" for="YearPicker">Car Year</label>
-                  <select id="YearPicker" class="year-picker"></select>
-               </div>
+              <div class="Car_Options">
+                <img src="/Media/Cars/sedan.png" class="Car_Option" data-src="/Media/Cars/sedan.png" alt="Sedan">
+                <img src="/Media/Cars/pickup.png" class="Car_Option" data-src="/Media/Cars/pickup.png" alt="Pickup">
+                <img src="/Media/Cars/suv.png" class="Car_Option" data-src="/Media/Cars/suv.png" alt="SUV">
+              </div>
                <div class="input-group">
                   <label class="Input_Label" for="Start_Location"
                      >Start Location</label
