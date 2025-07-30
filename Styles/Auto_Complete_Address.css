@@ -1,0 +1,26 @@
+.suggestions {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 9999;
+    width: 100%;
+}
+
+.suggestion-item {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.bold-match {
+    font-weight: bold;
+}
+
+.autocomplete-wrapper {
+    position: relative;
+}

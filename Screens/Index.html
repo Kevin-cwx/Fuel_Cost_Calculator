@@ -1,72 +1,82 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="/Styles/MyStyleSheet.css" />
-      <title></title>
-   </head>
-   <body> 
-      <div class="Main">
-         <div class="Left">
-            <h2>Calculate how much gas it costs you to drive.</h2>
-            <div class="input-row">
-               <div class="input-group">
-                  <label class="Input_Label" for="Brand">Select Car</label>
-                  <img src="" alt="Trulli" id="Car" class="Car_Image">
-               </div>
-              <div class="Car_Options">
-                <img src="/Media/Cars/sedan.png" class="Car_Option" data-src="/Media/Cars/sedan.png" alt="Sedan">
-                <img src="/Media/Cars/pickup.png" class="Car_Option" data-src="/Media/Cars/pickup.png" alt="Pickup">
-                <img src="/Media/Cars/suv.png" class="Car_Option" data-src="/Media/Cars/suv.png" alt="SUV">
-              </div>
-               <div class="input-group">
-                  <label class="Input_Label" for="Start_Location"
-                     >Start Location</label
-                     >
-                  <input
-                     type="text"
-                     id="Start_Location"
-                     placeholder="Start Location" />
-               </div>
-               <div class="input-group">
-                  <label class="Input_Label" for="End_Location">End Location</label>
-                  <input type="text" id="End_Location" placeholder="End Location" />
-               </div>
+
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="/Styles/MyStyleSheet.css" />
+   <title>Fuel Cost Calculator</title>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+   <div class="Main">
+      <div class="Left">
+         <h2>Calculate how much gas it costs you to drive.</h2>
+         <div class="input-row">
+            <div class="input-group">
+               <label class="Input_Label" >Select Car</label>
+               <img src="" alt="Trulli" id="Car" class="Car_Image">
             </div>
-            <div class="row-pair">
-               <span id="AC_Parent">
-               <label class="Input_Label">Air Conditioning (AC)</label><br />
-               <label
-                  ><input type="radio" name="AC" value="on" checked /> on</label
-                  >
-               <label><input type="radio" name="AC" value="off" /> off</label>
-               </span>
-               <span id="Traffic_Parent">
-               <label class="Input_Label">Traffic</label><br />
-               <label
-                  ><input type="radio" name="traffic" value="none" checked />
-               None</label
-                  >
-               <label><input type="radio" name="traffic" value="low" /> Low</label>
-               <label
-                  ><input type="radio" name="traffic" value="medium" />
-               Medium</label
-                  >
-               <label
-                  ><input type="radio" name="traffic" value="high" /> High</label
-                  >
-               </span>
+            <div class="Car_Options">
+               <img src="/Media/Cars/sedan.png" class="Car_Option" data-src="/Media/Cars/sedan.png" alt="Sedan">
+               <img src="/Media/Cars/pickup.png" class="Car_Option" data-src="/Media/Cars/pickup.png" alt="Pickup">
+               <img src="/Media/Cars/suv.png" class="Car_Option" data-src="/Media/Cars/suv.png" alt="SUV">
             </div>
-            <button class="btn-calculate" onclick="Calculate_Gas_Money(false)">
-            Calculate
-            </button>
-            <button class="btn-calculate" onclick="Calculate_Gas_Money(true)">
-            Randomize
-            </button>
+            <div class="input-group">
+            <div class="autocomplete-wrapper">
+               <label class="Input_Label" for="Start_Location">Start Location</label>
+               <input type="text" id="Start_Location" placeholder="Start Location" />
+               <div id="Start_Location_suggestions" class="suggestions"></div>
+            </div>
+            
+            <div class="autocomplete-wrapper">
+               <label class="Input_Label" for="End_Location">End Location</label>
+               <input type="text" id="End_Location" placeholder="End Location" />
+               <div id="End_Location_suggestions" class="suggestions"></div>
+            </div>
+            </div>
+            
          </div>
-         <div class="Right"></div>
+         <div class="row-pair">
+            <span id="AC_Parent">
+               <label class="Input_Label">Air Conditioning (AC)</label><br />
+               <label><input type="radio" name="AC" value="on" checked /> on</label>
+               <label><input type="radio" name="AC" value="off" /> off</label>
+            </span>
+            <span id="Traffic_Parent">
+               <label class="Input_Label">Traffic</label><br />
+               <label><input type="radio" name="traffic" value="none" checked />
+                  None</label>
+               <label><input type="radio" name="traffic" value="low" /> Low</label>
+               <label><input type="radio" name="traffic" value="medium" />
+                  Medium</label>
+               <label><input type="radio" name="traffic" value="high" /> High</label>
+            </span>
+         </div>
+         <button class="btn-calculate" onclick="Calculate_Gas_Money(false)">
+            Calculate
+         </button>
+         <button class="btn-calculate" onclick="Calculate_Gas_Money(true)">
+            Randomize
+         </button>
       </div>
-      <script src="/Scripts/MainScript.js"></script>
-      <script src="/Scripts/Calculate_Gas_Money.js"></script>
-   </body>
+
+
+      <div class="Right">
+
+
+         <div id="map" style="height:300px;"></div>
+
+      </div>
+   </div>
+   <script src="/Scripts/MainScript.js"></script>
+   <script src="/Scripts/Calculate_Gas_Money.js"></script>
+      <script src="/Scripts/Auto_Complete_Address.js"></script>
+
+</body>
+
 </html>

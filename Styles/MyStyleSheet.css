@@ -94,39 +94,21 @@ input[type="radio"] {
   outline-offset: 2px;
 }
 
-/* Year Picker */
-
-.year-picker {
-  width: 15%;
-  max-width: 300px;
-  margin-bottom: 15px;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: white;
-  appearance: none;
-  cursor: pointer;
-  transition: border-color 0.3s;
-}
-
 /* Input Groups */
 .input-row {
   /* display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between; */
 
-  display: flex;
-  gap: 1rem; /* space between inputs */
-  flex-wrap: nowrap;
-  margin-bottom: 1rem;
+  display:flex;
+  
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
   min-width: 150px; /* decent base width */
-  flex: 1;
+  
 }
 
 .input-group input,
@@ -157,6 +139,7 @@ input[type="radio"] {
 /* Car Option */
 .Car_Options {
 	margin-top: 10px;
+  
 }
 
 .Car_Option {
